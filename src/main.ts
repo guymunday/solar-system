@@ -1,6 +1,6 @@
 import "./style.css"
 import * as THREE from "three"
-import { gsap } from "gsap"
+// import { gsap } from "gsap"
 import SceneInit from "./three/SceneInit"
 import Planet from "./three/Planet"
 
