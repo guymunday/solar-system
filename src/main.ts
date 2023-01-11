@@ -9,16 +9,26 @@ function handleStartScene() {
   scene.initScene()
   scene.animate()
 
-  const sun = new Planet(30, 0, "sun", "sun.jpeg")
-  const mercury = new Planet(10, 50, "mercury", "mercury.png")
-  const venus = new Planet(15, 100, "venus", "venus.jpeg")
-  const earth = new Planet(17, 200, "earth", "earth.jpeg")
+  const sun = new Planet(30, 0, "venus", "venus.jpeg")
+  const one = new Planet(15, 50, "one", "one.jpg")
+  const two = new Planet(10, 75, "two", "two.jpg")
+  const three = new Planet(15, 100, "three", "three.jpg")
+  const four = new Planet(10, 125, "four", "four.jpg")
+  const five = new Planet(15, 150, "five", "five.jpg")
+  const six = new Planet(10, 175, "six", "six.jpg")
+  const seven = new Planet(15, 200, "seven", "sun.jpg")
+
   const planets = new THREE.Group()
 
   planets.add(sun)
-  planets.add(mercury)
-  planets.add(venus)
-  planets.add(earth)
+  planets.add(one)
+  planets.add(two)
+  planets.add(three)
+  planets.add(four)
+  planets.add(five)
+  planets.add(six)
+  planets.add(seven)
+
   scene.scene.add(planets)
 
   // planets.children.forEach((p) => {
@@ -42,9 +52,13 @@ function handleStartScene() {
   const EARTH_YEAR = 2 * Math.PI * (1 / 60) * (1 / 60)
   const animate = () => {
     sun.rotation.y += EARTH_YEAR * 1
-    mercury.rotation.y += EARTH_YEAR * 6
-    venus.rotation.y += EARTH_YEAR * 2
-    earth.rotation.y += EARTH_YEAR * 1
+    one.rotation.y -= EARTH_YEAR * 6
+    two.rotation.y += EARTH_YEAR * 2
+    three.rotation.y -= EARTH_YEAR * 1
+    four.rotation.y += EARTH_YEAR * 6
+    five.rotation.y -= EARTH_YEAR * 2
+    six.rotation.y += EARTH_YEAR * 1
+    seven.rotation.y -= EARTH_YEAR * 3
     requestAnimationFrame(animate)
   }
   animate()
